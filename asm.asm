@@ -7,10 +7,18 @@ divisor REAL8 18446744073709551615.0;
 
 .code
 random_generator proc
-	; or 4504141 for when the seed is zero
+	mov r9, 18446744073709551615 
 
-	or rcx, 4504141
-
+	cmp rcx, 0
+	
+	cmove rcx, r9
+	
+	mov r9, rcx
+	
+	shl rcx, 32
+	
+	or rcx, r9
+	
 	; Get seed directions
 	lea rbx, seeds
 
