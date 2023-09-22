@@ -7,6 +7,8 @@ divisor REAL8 18446744073709551615.0;
 
 .code
 random_generator proc
+	; I know i should use rdrand :)
+
 	mov r9, 18446744073709551615 
 
 	cmp rcx, 0
