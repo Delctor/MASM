@@ -1,5 +1,5 @@
 .data
-array QWORD 10, 20, 30, 40
+seeds QWORD 10, 20, 30, 40
 
 masks REAL8 19342813113834066795298816.0, 4503599627370496.0, 19342813118337666422669312.0
 
@@ -12,7 +12,7 @@ random_generator proc
 	or rcx, 4504141
 
 	; Get seed directions
-	lea rbx, array
+	lea rbx, seeds
 
 	; For remaining elements
 
