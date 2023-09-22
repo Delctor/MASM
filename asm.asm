@@ -7,9 +7,9 @@ divisor REAL8 18446744073709551615.0;
 
 .code
 random_generator proc
-	; Xor 18446744073709551615 for when the seed is zero
+	; or 4504141 for when the seed is zero
 
-	xor rcx, 18446744073709551615
+	or rcx, 4504141
 
 	; Get seed directions
 	lea rbx, array
